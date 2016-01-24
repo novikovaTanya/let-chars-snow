@@ -1,0 +1,19 @@
+### Let chars snow !
+
+Simple project to try Akka Streams
+
+For each cloud there is a stream of the random alphanumeric characters.
+10 most popular characters are snown in the terminal
+
+To run this program:
+
+    $ sbt
+    > compile
+    > run
+    > go to localhost:8080
+
+
+![Let chars snow](https://lh3.googleusercontent.com/s90RvBlQvXDVJfP_V73zhZ0A6Wi_7lTDWYiGVm8HY1IpDosQPh31gsV1h3rf-YzCgKhgdAkPC4-f_6ucv_PpuRDypGT-VHlmiFuKSOpZZ4Dn9OUHnPY-fvNSH_BAWQodHRGZ3OV20I4-cQwdoxUwrljn8CUySQtTGLQewNWDBY5hL1AvugLNwAMPE1TV5cvyrihunpCAJh0iWpkxZnTj56xs-mcDoGlHCZ5Pe3vyd6__iqVmvYkb67OZYJR7jyNN21S4jg2hkKJoxRLDKnf-zXYuy6drPAmXCSjE__SD_iKn1wtiWVosxxlI7LyAPtDVNGmxMPpw0Yi2kjwock_pxT-LfW_e7pgXNms_r5PUa4U-uzLMqTSRsl9JlKW0kkKTHEJg6ThXxntRDiLCj2BOs5Bcp6I6Jy0YvNV2PbA0IRs8Syh_2ldIf_Wi0NkDAVDXNQ5I6R6xQAfnLJsICOpKiq25AsuFpkbQfeLdZNsXaSM5zHvFNBeU8qKi_4fxlQK2cvRYIPg8TLyRYMi37SpywWpQJAfWAOe4-GigDeXqYulVEsH0nNiIY9iwkrqZUM0iehYm=w546-h529-no "Let chars snow")
+
+
+![top10](https://lh3.googleusercontent.com/xcTpgb7LLnsLw_lODz_3L4By9fWcCdEegADJ_KAAeFpBswShR6A0_U_8UH9B3oGlha8WQWfUASgC0vuKYt7a5wMKXnZxqFRVRFkCPKUpEM4BEYVdu9oSqc7NQ3I44lRd7_1EMC8vAbumNyTYHYqE6SeVspXI91_s7sAk4AV8azfjkNdIxsfOhpw7Azf1fzNdHu409Awg1WduGKbHcSHOlHdwz26TKYNWyujywPP0VNXRw1e7N4yfk2yriT0GPvWAWT93JiDautc1P3k_AozS5ROPHdhFB-gLMafzUjliDjxa0xt7HWMycjnCslRnWPH987Yxw3gO5MfWzgBcCa0gYlIiUZq2HRnmE6yYEtwzeN-Mz8CDSsIkNWK8ek5SUjvWpsDpTpqfyE0xS7ehh-UxQelGhoR1z1HyLy-SwUnO5M1winKTqJdlZRQEnCxeN9kwrfS7fwJhlIxZMSl7MtPSGLrSRYzBwCcCNgkB0XCiuTz7tZWNhVHq6rhjzDnZrRsHQaomAm_MtVrsK0ktgHePlmYOiz5WSCXQ1Wm1oXjgZbeTEvojeBPPI0X1LUsAJatUSpn6=w636-h60-no "top10")
