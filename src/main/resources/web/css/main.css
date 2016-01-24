@@ -1,0 +1,78 @@
+@-webkit-keyframes letter-fall {
+  0% { top: 0% }
+  99% { top: 100% }
+  100% { opacity: 0.2; }
+}
+
+@-webkit-keyframes letter-shake {
+  0% { -webkit-transform: translateX(10px) }
+  25% { -webkit-transform: translateX(40px) }
+  50% { -webkit-transform: translateX(20px) }
+  75% { -webkit-transform: translateX(30px) }
+  100% { -webkit-transform: translateX(10px) }
+}
+
+.cloud1 > p, .cloud2 > p, .cloud3 > p {
+  position: absolute;
+  cursor: default;
+  -webkit-user-select: none;
+  -webkit-animation-name: letter-fall, letter-shake;
+  -webkit-animation-duration: 5s, 3s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: 1, 6;
+  -webkit-animation-play-state: running, running;
+}
+
+@font-face {
+  font-family: 'SnowFont';
+  src: url('../font/KGWakeMeUp.ttf');
+}
+
+.sky, .snow2 {
+  width: 500px;
+  height: 500px;
+}
+
+.sky {
+  position: relative;
+  background-image: url('../img/clouds.gif');
+  background-size: cover;
+  font-size: 15px;
+  color: white;
+  font-family: "SnowFont";
+  border-radius: 50px;
+  box-shadow: 1px 1px 10px #9E9D9D;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.cloud3, .cloud2, .cloud1, .snow2 {
+  position: absolute;
+}
+
+.cloud1 {
+  top: 330px;
+  left: 40px;
+  width: 160px;
+  height: 160px;
+}
+
+.cloud2 {
+  top: 160px;
+  left: 200px;
+  width: 160px;
+  height: 335px;
+}
+
+.cloud3 {
+  top: 290px;
+  left: 350px;
+  width: 120px;
+  height: 200px;
+}
+
+.controls img {
+  margin: 20px 0px 0px 20px;
+  width: 35px;
+  height: 30px;
+}
