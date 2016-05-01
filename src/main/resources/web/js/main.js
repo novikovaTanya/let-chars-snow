@@ -1,5 +1,4 @@
 function appendToCloud (event) {
-  // console.log("Message: " + event.data);
   var p = $('<p style="left:' + (Math.floor(Math.random() * 100) - 20) + 'px">' + event.data + "</p>");
   $(".cloud" + this.n).append(p);
   p.on('webkitAnimationEnd', function(e) { this.remove(); })

@@ -1,12 +1,11 @@
 package chars
 
-import scala.util.{ Failure, Success }
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
 import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.Http
 
-import scala.io.StdIn
+import scala.util.{Failure, Success}
 
 trait Server {
   implicit val system = ActorSystem()
@@ -24,10 +23,5 @@ trait Server {
       case Success(x) => println(s"Server is listening on ${x.localAddress.getHostName}:${x.localAddress.getPort}")
       case Failure(e) => println(s"Binding failed with ${e.getMessage}")
     }
-
-    StdIn.readLine()
-    system.shutdown()
-    system.awaitTermination()
   }
-
 }

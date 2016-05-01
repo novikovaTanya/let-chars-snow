@@ -4,6 +4,7 @@ import akka.http.scaladsl.model.ws.{ Message, TextMessage }
 import akka.http.scaladsl.server.Directives._
 import akka.stream.scaladsl._
 import akka.stream.{ SourceShape, ThrottleMode }
+import akka.NotUsed
 
 import scala.concurrent.duration._
 import scala.language.{ implicitConversions, postfixOps }
@@ -23,7 +24,7 @@ object Chars extends Server with App {
     get {
       path("snow") {
         val flow = Flow.fromSinkAndSource(Sink.ignore, source)
-        handleWebsocketMessages(flow)
+        handleWebSocketMessages(flow)
       }
     }
 
@@ -41,7 +42,6 @@ object Chars extends Server with App {
     val chars =
       Source(Random.alphanumeric)
         .throttle(10, 1 second, 10, ThrottleMode.Shaping)
-        // .via(logFlow)
         .map(ch => TextMessage(ch.toString))
     val bcast = b.add(Broadcast[Message](2))
 
@@ -50,8 +50,8 @@ object Chars extends Server with App {
     SourceShape(bcast.out(1))
   })
 
-  implicit def messageToString[T <: Message](m: T): String = m.asInstanceOf[TextMessage.Strict].text // ?
-  def transform: Flow[Message, String, Unit] = Flow[Message].map { ch => ch.toUpperCase }
+  implicit def messageToString[T <: Message](m: T): String = m.asInstanceOf[TextMessage.Strict].text
+  def transform: Flow[Message, String, NotUsed] = Flow[Message].map { ch => ch.toUpperCase }
 
   private def showTop10(m: Map[String, Int]): Unit = {
     val top10 = for {
