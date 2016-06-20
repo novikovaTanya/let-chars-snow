@@ -12,7 +12,7 @@ To run this program:
 
 For each cloud there is a stream of random alphanumeric characters
 
-![Let chars snow](https://media.giphy.com/media/l2JImQEeRglHsoxHO/giphy.gif "Let chars snow")
+![Let chars snow](src/main/resources/web/img/demo-clouds.gif "Let chars snow")
 
 10 most popular characters are shown in the terminal
 
